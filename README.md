@@ -27,9 +27,13 @@ Cada fila de `data/libros.csv` es un libro:
 | `categoria_origen` | Categoría seleccionada: Realismo |
 | `fecha_extraccion` | Fecha en que se obtuvo el registro |
 
-**Cantidad de libros extraídos:** *(pendiente — se completa al correr la extracción)*
+**Cantidad de libros extraídos:** 120
 
-**Criterio de selección:** se rrecorre las páginas del género Realismo en orden secuencial, empezando por la página 1 y avanzando. Se toman todas las fichas de cada página, sin filtros de autor, año, idioma, etc. hasta alcanzar la cantidad objetivo de libros.
+**Criterio de selección:** se recorren las páginas del género Realismo (`/genero/realista/`
+en el sitio) en orden secuencial, empezando por la página 1 y avanzando. Se toman todas
+las fichas de cada página, sin filtros de autor, año, idioma, etc., hasta alcanzar la
+cantidad objetivo de libros (`OBJETIVO_LIBROS` en `src/scraper.py`, actualmente 120). Con
+ese objetivo el recorrido llega hasta la página 5.
 
 ## Estructura del repositorio
 
@@ -55,7 +59,7 @@ cd NLP_Aiup_Paoloni_Silva
 python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 
-pip install playwright beautifulsoup4 pandas lxml
+pip install -r requirements.txt      # o: pip install playwright beautifulsoup4 pandas lxml
 playwright install chromium
 ```
 
