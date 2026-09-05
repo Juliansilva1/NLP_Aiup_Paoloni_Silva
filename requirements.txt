@@ -1,0 +1,10 @@
+# Dependencias directas del scraper. Las transitivas (soupsieve, numpy,
+# python-dateutil, tzdata, greenlet, pyee, typing_extensions) las resuelve pip.
+#
+# Despues de instalar hace falta, una sola vez por maquina:
+#     playwright install chromium
+
+beautifulsoup4==4.15.0
+lxml==6.1.3
+pandas==3.0.5
+playwright==1.62.0
