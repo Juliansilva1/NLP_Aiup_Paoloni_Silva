@@ -1,37 +1,16 @@
 # Diseño de la extracción
 
-**Práctica Unidad 1 — Extracción y Procesamiento de Texto (NLP, UNR / FCEIA)**
-
-Integrantes: Agustín Aiup, Franco Paoloni, Julián Silva.
-
-Documento correspondiente a la Parte 1 de la práctica. Describe qué se extrae, de
-dónde y con qué estrategia, antes de pasar a la implementación en
+Se describe qué se extrae, de dónde y con qué estrategia, antes de pasar a la implementación en
 `src/scraper.py`.
-
----
 
 ## 1. Categoría seleccionada
 
 | | |
 | --- | --- |
 | **Categoría** | Realismo |
-| **URL del listado** | `https://ww3.lectulandia.com/genero/realista/` |
+| **URL de la categoría** | `https://ww3.lectulandia.com/genero/realista/` |
 | **Cantidad de libros a extraer** | 120 |
 | **Fecha del relevamiento** | 05/09/2026 |
-
-### Nota sobre la URL
-
-El sitio no expone la categoría bajo el nombre "Realismo" ni bajo la ruta
-`/categoria/`. El relevamiento con las herramientas de desarrollador mostró que:
-
-- El dominio `lectulandia.com` redirige a `ww3.lectulandia.com`.
-- Las categorías cuelgan de `/genero/`, no de `/categoria/`.
-- El género se llama **Realista**, no "Realismo": la ruta `/genero/realismo/`
-  devuelve un 404 y `/genero/realista/` es la correcta.
-
-Se mantiene "Realismo" como nombre de la categoría en el informe y en el campo
-`categoria_origen` del dataset, por ser el término con el que el grupo eligió la
-categoría, y se documenta acá la correspondencia con el slug real del sitio.
 
 ### Criterio de selección de páginas
 
@@ -58,44 +37,20 @@ Se eligió este criterio por tres motivos:
    cantidad, sin lógica de filtrado.
 
 El género Realista tiene **162 páginas de 24 fichas cada una**. Para llegar a los
-120 libros del objetivo alcanza con recorrer **5 páginas** (`120 / 24 = 5`). El
-bucle igual corta por cantidad de registros únicos y no por número de página, así
-que el objetivo se puede cambiar sin recalcular nada.
-
----
+120 libros del objetivo alcanza con recorrer **5 páginas** (`120 / 24 = 5`).
 
 ## 2. Datos a extraer
 
-| Campo | Descripción | Tipo | Si falta |
-| --- | --- | --- | --- |
-| `titulo` | Título del libro | Texto | No debería faltar; la ficha se descarta |
-| `autores` | Autor o autores, separados por `, ` | Texto | Cadena vacía |
-| `generos` | Géneros asignados por el sitio, separados por `, ` | Texto | Cadena vacía |
-| `serie` | Serie a la que pertenece el libro | Texto | Cadena vacía |
-| `sinopsis` | Texto de la sinopsis | Texto | Cadena vacía |
-| `url_libro` | URL absoluta de la ficha; identifica al registro | Texto | No debería faltar |
-| `categoria_origen` | Categoría desde la que se llegó al libro (`Realismo`) | Texto | Constante |
-| `fecha_extraccion` | Fecha en que se obtuvo el registro, en formato ISO | Fecha | Constante por corrida |
-
-Los campos ausentes se representan siempre con la **cadena vacía**, nunca con
-`None`, `NaN` ni textos como "N/D", de modo que el criterio sea uniforme en todo
-el archivo.
-
-`autores` y `generos` pueden contener más de un valor: se guardan en una sola
-celda separados por coma y espacio.
-
-No se descarga la portada, ni los archivos EPUB o PDF de los libros: se extraen
-únicamente metadatos y sinopsis públicas.
-
-### Sobre el campo `serie`
-
-La mayoría de los libros del género no pertenece a ninguna serie. En el
-relevamiento, sobre 48 fichas revisadas ninguna tenía el dato, y en el dataset
-final quedó vacío en 111 de los 120 registros. **No es un error de extracción**:
-el sitio directamente omite el bloque de serie en las fichas de libros sueltos,
-por lo que el campo vacío es el valor correcto.
-
----
+| Campo | Descripción |
+| --- | --- |
+| `titulo` | Título del libro |
+| `autores` | Autor o autores |
+| `generos` | Géneros |
+| `serie` | Serie a la que pertenece el libro |
+| `sinopsis` | Texto de la sinopsis |
+| `url_libro` | URL absoluta de la ficha |
+| `categoria_origen` | Categoría desde la que se llegó al libro |
+| `fecha_extraccion` | Fecha en que se obtuvo el registro |
 
 ## 3. Localización de los datos
 
@@ -109,14 +64,6 @@ herramientas de desarrollador del navegador.
 | Ficha de un libro | Listado de la categoría | `<article class="card">` | `article.card` |
 | URL de la ficha | Listado de la categoría | `<a class="title" href="...">` | `article.card a.title` → atributo `href` |
 
-Cada página del listado contiene 24 elementos `article.card`. El `href` es
-relativo (`/book/<slug>/`), así que hay que combinarlo con el dominio para
-obtener la URL absoluta.
-
-El listado también muestra un fragmento de la sinopsis dentro de
-`article.card .description`, pero **viene truncado** con puntos suspensivos entre
-corchetes. Por eso la sinopsis se toma de la ficha individual y no del listado.
-
 ### Ficha individual
 
 Todos los datos están dentro del contenedor `div#bookWrapper > div#book`.
@@ -128,20 +75,6 @@ Todos los datos están dentro del contenedor `div#bookWrapper > div#book`.
 | Géneros | Ficha individual | `<div id="genero">` con varios `<a class="dinSource">` | `#genero a.dinSource` |
 | Serie | Ficha individual | `<div id="serie">` con un `<a class="dinSource">` | `#serie a.dinSource` |
 | Sinopsis | Ficha individual | `<div id="sinopsis">` | `#sinopsis` |
-
-Tres observaciones del relevamiento:
-
-- **El título no se toma del `<h1>` de la página.** El primer `<h1>` del documento
-  es el logo del sitio (`h1.site-title`). El título del libro está en el `<h1>`
-  que cuelga de `div#title`, de ahí que el selector sea `#title h1` y no `h1`.
-- **El `div#serie` no existe** cuando el libro no pertenece a una serie, con lo
-  cual el selector no devuelve nada y el campo queda vacío. Cuando sí existe, el
-  `<span class="tagTitle">` que lo precede indica además el número de orden
-  ("Libro 1 de: "); ese número no se guarda, solo el nombre de la serie.
-- Los enlaces de autor y género llevan `class="dinSource"`, lo que permite
-  distinguirlos de otros enlaces del mismo bloque.
-
----
 
 ## 4. Estrategia de extracción
 
@@ -175,7 +108,7 @@ Tres observaciones del relevamiento:
 
 - Cada navegación va dentro de un bloque de manejo de errores con un tiempo
   máximo de espera de 30 segundos. Un error puntual en una ficha se informa por
-  pantalla y el programa **sigue con la siguiente**, sin cortar la ejecución.
+  pantalla y el programa sigue con la siguiente, sin cortar la ejecución.
 - Se hace una pausa de 2 segundos entre páginas del listado y de 0,5 segundos
   entre fichas, para no sobrecargar el servidor.
 
@@ -188,16 +121,3 @@ corrida interrumpida se puede retomar sin volver a descargar lo ya obtenido.
 
 El archivo se guarda con codificación `utf-8-sig` para que los acentos se vean
 correctamente al abrirlo con Excel.
-
----
-
-## 5. Controles previstos sobre el dataset
-
-Antes de la entrega se verifica que:
-
-- No haya duplicados por `url_libro`.
-- Todos los registros tengan título y una URL válida.
-- La mayoría de los registros tenga sinopsis.
-- No queden espacios ni saltos de línea sobrantes.
-- Los campos ausentes estén representados de forma consistente.
-- La cantidad de registros esté dentro del rango pedido.

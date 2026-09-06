@@ -6,11 +6,11 @@ El objetivo de la primera unidad es construir un corpus de libros a partir de la
 
 ## Integrantes
 
-| Integrante | Legajo |
-| --- | --- |
-| Aiup | Agustín|
-| Paoloni | Franco |
-| Silva | Julián |
+| Integrante |
+| --- |
+| Aiup Agustín|
+| Paoloni Franco |
+| Silva Julián |
 
 ## El dataset
 
@@ -32,20 +32,21 @@ Cada fila de `data/libros.csv` es un libro:
 **Criterio de selección:** se recorren las páginas del género Realismo (`/genero/realista/`
 en el sitio) en orden secuencial, empezando por la página 1 y avanzando. Se toman todas
 las fichas de cada página, sin filtros de autor, año, idioma, etc., hasta alcanzar la
-cantidad objetivo de libros (`OBJETIVO_LIBROS` en `src/scraper.py`, actualmente 120). Con
-ese objetivo el recorrido llega hasta la página 5.
+cantidad objetivo de libros.
 
 ## Estructura del repositorio
 
 ```
 README.md
+CLAUDE.md
+.gitignore
 src/
-  scraper.py                    # extracción con Playwright + BeautifulSoup
+  scraper.py                    
 data/
-  libros.csv                    # dataset resultante
+  libros.csv                    
 docs/
-  diseno_extraccion.md          # Parte 1: diseño de la extracción
-  Práctica Unidad 1 - NLP.pdf   # consigna
+  diseno_extraccion.md          
+  Práctica Unidad 1 - NLP.pdf   
 ```
 
 ## Instalación
@@ -53,23 +54,23 @@ docs/
 Requiere Python 3.10 o superior.
 
 ```bash
+1. Clonar el repositorio:
 git clone https://github.com/Juliansilva1/NLP_Aiup_Paoloni_Silva
-cd NLP_Aiup_Paoloni_Silva
 
+2. Dentro de la carpeta del repositorio, crear un entorno virtual y activarlo:
 python -m venv .venv
-source .venv/bin/activate        # Windows: .venv\Scripts\activate
+source .venv/bin/activate     # Windows: .venv\Scripts\activate
 
-pip install -r requirements.txt      # o: pip install playwright beautifulsoup4 pandas lxml
+3. Instalar los requerimientos y el browser Chronium:
+pip install -r requirements.txt
 playwright install chromium
 ```
 
-El último comando descarga el navegador que usa Playwright; es necesario una sola
-vez por máquina.
-
 ## Ejecución
 
+Posicionarse dentro de la carpeta del repositorio y ejecutar:
 ```bash
-python src/scraper.py
+python src/scraper.py     # Windows: python .\src\scraper.py
 ```
 
 El programa abre Chromium sin ventana (headless), recorre las páginas de la
