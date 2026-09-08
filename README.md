@@ -11,6 +11,7 @@ El objetivo de la primera unidad es construir un corpus de libros a partir de la
 | Aiup Agustín|
 | Paoloni Franco |
 | Silva Julián |
+| Facundo Ferreira da Camara |
 
 ## El dataset
 
