@@ -43,6 +43,7 @@ El género Realista tiene **162 páginas de 24 fichas cada una**. Para llegar a 
 
 | Campo | Descripción |
 | --- | --- |
+| `id` | Identificador asignado al libro |
 | `titulo` | Título del libro |
 | `autores` | Autor o autores |
 | `generos` | Géneros |
