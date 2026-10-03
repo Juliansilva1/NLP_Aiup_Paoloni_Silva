@@ -8,3 +8,6 @@ __pycache__/
 
 # Logs y temporales de corridas
 *.log
+
+# Memoria agente
+CLAUDE.md
