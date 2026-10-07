@@ -1,0 +1,472 @@
+{
+  "criterio_de_relevancia": "Un libro es relevante si su sinopsis permite afirmar que la consulta describe el asunto central de la obra, no una mencion incidental. Juicio binario, hecho leyendo las 120 sinopsis y antes de ejecutar ningun modelo.",
+  "consultas": [
+    {
+      "id": "q01",
+      "texto": "novelas sobre la guerra y cómo marca la vida de quienes la atraviesan",
+      "tema": "guerra y posguerra",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "Conflictos armados concretos presentes en la sinopsis: Segunda Guerra Mundial (8), ocupación de Chipre (10), Guerra del Pacífico (49, 85), invasión de Irak (54), guerra civil argelina (64), guerra de Angola (103).",
+      "relevantes": [
+        {
+          "id": 8,
+          "titulo": "Mi querida Irene",
+          "url_libro": "https://ww3.lectulandia.com/book/mi-querida-irene/"
+        },
+        {
+          "id": 10,
+          "titulo": "La isla del árbol perdido",
+          "url_libro": "https://ww3.lectulandia.com/book/la-isla-del-arbol-perdido/"
+        },
+        {
+          "id": 49,
+          "titulo": "Adiós al séptimo de línea V: El regreso de los inmortales",
+          "url_libro": "https://ww3.lectulandia.com/book/adios-al-septimo-de-linea-v-el-regreso-de-los-inmortales/"
+        },
+        {
+          "id": 54,
+          "titulo": "Las cenizas de Bagdad",
+          "url_libro": "https://ww3.lectulandia.com/book/las-cenizas-de-bagdad/"
+        },
+        {
+          "id": 64,
+          "titulo": "Huríes",
+          "url_libro": "https://ww3.lectulandia.com/book/huries/"
+        },
+        {
+          "id": 85,
+          "titulo": "Adiós al séptimo de línea IV: Los batallones olvidados",
+          "url_libro": "https://ww3.lectulandia.com/book/adios-al-septimo-de-linea-iv-los-batallones-olvidados/"
+        },
+        {
+          "id": 103,
+          "titulo": "Morir en la arena",
+          "url_libro": "https://ww3.lectulandia.com/book/morir-en-la-arena/"
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "texto": "historias ambientadas en Japón",
+      "tema": "ambientación japonesa",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "La sinopsis situa la accion en Japon: Yonago y Tokio (48), Nagasaki (52), Tokio contemporaneo (71), Kioto (77).",
+      "relevantes": [
+        {
+          "id": 48,
+          "titulo": "Una joven en Tokio",
+          "url_libro": "https://ww3.lectulandia.com/book/una-joven-en-tokio/"
+        },
+        {
+          "id": 52,
+          "titulo": "Madame Crisantemo",
+          "url_libro": "https://ww3.lectulandia.com/book/madame-crisantemo/"
+        },
+        {
+          "id": 71,
+          "titulo": "Los amantes de la noche",
+          "url_libro": "https://ww3.lectulandia.com/book/los-amantes-de-la-noche/"
+        },
+        {
+          "id": 77,
+          "titulo": "El pabellón de oro (trad. Carlos Rubio)",
+          "url_libro": "https://ww3.lectulandia.com/book/el-pabellon-de-oro-trad-carlos-rubio/"
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "texto": "la dureza de la vida rural en pueblos aislados",
+      "tema": "vida rural y aislamiento",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "Entorno rural con penuria o aislamiento explícitos: campo catalán hostil (3), hombre mayor de campo (6), labrador (44, 57), aldea aislada con hambre (62), montañas noruegas (76), centro de Chile (78), montaña mendocina (82).",
+      "relevantes": [
+        {
+          "id": 3,
+          "titulo": "La enjuta",
+          "url_libro": "https://ww3.lectulandia.com/book/la-enjuta/"
+        },
+        {
+          "id": 6,
+          "titulo": "Marcelino: decires de un hombre",
+          "url_libro": "https://ww3.lectulandia.com/book/marcelino-decires-de-un-hombre/"
+        },
+        {
+          "id": 44,
+          "titulo": "El Pantano del Diablo",
+          "url_libro": "https://ww3.lectulandia.com/book/el-pantano-del-diablo/"
+        },
+        {
+          "id": 57,
+          "titulo": "La charca del diablo",
+          "url_libro": "https://ww3.lectulandia.com/book/la-charca-del-diablo/"
+        },
+        {
+          "id": 62,
+          "titulo": "Madelaine antes del alba",
+          "url_libro": "https://ww3.lectulandia.com/book/madelaine-antes-del-alba/"
+        },
+        {
+          "id": 76,
+          "titulo": "Arne",
+          "url_libro": "https://ww3.lectulandia.com/book/arne/"
+        },
+        {
+          "id": 78,
+          "titulo": "La sombra de las cumbres",
+          "url_libro": "https://ww3.lectulandia.com/book/la-sombra-de-las-cumbres/"
+        },
+        {
+          "id": 82,
+          "titulo": "La enlutada",
+          "url_libro": "https://ww3.lectulandia.com/book/la-enlutada/"
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "texto": "un asesinato y la investigación que viene después",
+      "tema": "crimen e investigación",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "Hay un homicidio o muerte sospechosa y alguien lo indaga: Raskolnikov (27, 31), detective privado (61), escritora hallada muerta (69), condena por asesinato (72), envenenamiento (74), disparo en la parroquia (93).",
+      "relevantes": [
+        {
+          "id": 27,
+          "titulo": "Crimen y castigo (II)",
+          "url_libro": "https://ww3.lectulandia.com/book/crimen-y-castigo-ii/"
+        },
+        {
+          "id": 31,
+          "titulo": "Crimen y castigo (I)",
+          "url_libro": "https://ww3.lectulandia.com/book/crimen-y-castigo-i/"
+        },
+        {
+          "id": 61,
+          "titulo": "La vida privada de Piero Garza",
+          "url_libro": "https://ww3.lectulandia.com/book/la-vida-privada-de-piero-garza/"
+        },
+        {
+          "id": 69,
+          "titulo": "El club de lectura",
+          "url_libro": "https://ww3.lectulandia.com/book/el-club-de-lectura/"
+        },
+        {
+          "id": 72,
+          "titulo": "La bala",
+          "url_libro": "https://ww3.lectulandia.com/book/la-bala/"
+        },
+        {
+          "id": 74,
+          "titulo": "Botánico",
+          "url_libro": "https://ww3.lectulandia.com/book/botanico/"
+        },
+        {
+          "id": 93,
+          "titulo": "Las víctimas",
+          "url_libro": "https://ww3.lectulandia.com/book/las-victimas/"
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "texto": "la relación entre una madre y sus hijos",
+      "tema": "vínculo materno-filial",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "El vínculo con la madre es el eje del argumento, no un detalle de fondo.",
+      "relevantes": [
+        {
+          "id": 23,
+          "titulo": "Un deseo para Sofía",
+          "url_libro": "https://ww3.lectulandia.com/book/un-deseo-para-sofia/"
+        },
+        {
+          "id": 24,
+          "titulo": "Mamá está dormida",
+          "url_libro": "https://ww3.lectulandia.com/book/mama-esta-dormida/"
+        },
+        {
+          "id": 43,
+          "titulo": "Nuestras madres",
+          "url_libro": "https://ww3.lectulandia.com/book/nuestras-madres/"
+        },
+        {
+          "id": 67,
+          "titulo": "Cuando brillan las manzanas",
+          "url_libro": "https://ww3.lectulandia.com/book/cuando-brillan-las-manzanas/"
+        },
+        {
+          "id": 100,
+          "titulo": "Las mujeres que fuimos",
+          "url_libro": "https://ww3.lectulandia.com/book/las-mujeres-que-fuimos/"
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "texto": "las miserias y la corrupción del poder político",
+      "tema": "poder político y corrupción",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "Retrato crítico de figuras de poder y sus bajezas: escándalos de Estado (17), político en decadencia (96), burla de la oratoria ligada a la reforma política (115), estadista mediocre (119).",
+      "relevantes": [
+        {
+          "id": 17,
+          "titulo": "Las Muñecas de la Corona",
+          "url_libro": "https://ww3.lectulandia.com/book/las-munecas-de-la-corona/"
+        },
+        {
+          "id": 96,
+          "titulo": "Su excelencia Eugène Rougon",
+          "url_libro": "https://ww3.lectulandia.com/book/su-excelencia-eugene-rougon/"
+        },
+        {
+          "id": 115,
+          "titulo": "Historia del famoso predicador fray Gerundio de Campazas, alias Zotes (Ed. BCRAE)",
+          "url_libro": "https://ww3.lectulandia.com/book/historia-del-famoso-predicador-fray-gerundio-de-campazas-alias-zotes-ed-bcrae/"
+        },
+        {
+          "id": 119,
+          "titulo": "El conde de Abranhos",
+          "url_libro": "https://ww3.lectulandia.com/book/el-conde-de-abranhos/"
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "texto": "el peso de la religión y la vida del clero",
+      "tema": "religión y clero",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "Clérigos, devoción o conflicto espiritual como materia central.",
+      "relevantes": [
+        {
+          "id": 88,
+          "titulo": "La reliquia (trad. Rebeca Hernández)",
+          "url_libro": "https://ww3.lectulandia.com/book/la-reliquia-trad-rebeca-hernandez/"
+        },
+        {
+          "id": 93,
+          "titulo": "Las víctimas",
+          "url_libro": "https://ww3.lectulandia.com/book/las-victimas/"
+        },
+        {
+          "id": 98,
+          "titulo": "La oración al diablo",
+          "url_libro": "https://ww3.lectulandia.com/book/la-oracion-al-diablo/"
+        },
+        {
+          "id": 112,
+          "titulo": "El santo y el demonio",
+          "url_libro": "https://ww3.lectulandia.com/book/el-santo-y-el-demonio/"
+        },
+        {
+          "id": 115,
+          "titulo": "Historia del famoso predicador fray Gerundio de Campazas, alias Zotes (Ed. BCRAE)",
+          "url_libro": "https://ww3.lectulandia.com/book/historia-del-famoso-predicador-fray-gerundio-de-campazas-alias-zotes-ed-bcrae/"
+        },
+        {
+          "id": 117,
+          "titulo": "Diálogos de Carmelitas",
+          "url_libro": "https://ww3.lectulandia.com/book/dialogos-de-carmelitas/"
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "texto": "el deseo sexual enfrentado a la moral de la época",
+      "tema": "deseo y moral",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "Sexualidad tratada en tensión con la respetabilidad social o la culpa.",
+      "relevantes": [
+        {
+          "id": 6,
+          "titulo": "Marcelino: decires de un hombre",
+          "url_libro": "https://ww3.lectulandia.com/book/marcelino-decires-de-un-hombre/"
+        },
+        {
+          "id": 20,
+          "titulo": "Mal comportamiento",
+          "url_libro": "https://ww3.lectulandia.com/book/mal-comportamiento/"
+        },
+        {
+          "id": 21,
+          "titulo": "Una hora mala la tiene cualquiera…",
+          "url_libro": "https://ww3.lectulandia.com/book/una-hora-mala-la-tiene-cualquiera/"
+        },
+        {
+          "id": 36,
+          "titulo": "Sí sé por qué",
+          "url_libro": "https://ww3.lectulandia.com/book/si-se-por-que/"
+        },
+        {
+          "id": 41,
+          "titulo": "Placer licuante",
+          "url_libro": "https://ww3.lectulandia.com/book/placer-licuante/"
+        },
+        {
+          "id": 45,
+          "titulo": "Teoría del juego",
+          "url_libro": "https://ww3.lectulandia.com/book/teoria-del-juego/"
+        },
+        {
+          "id": 90,
+          "titulo": "La celada",
+          "url_libro": "https://ww3.lectulandia.com/book/la-celada/"
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "texto": "emigrar a otro país y empezar de nuevo lejos de casa",
+      "tema": "migración y exilio",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "Desplazamiento a otro pais como experiencia central: emigrados rusos en Toronto (13), exilio y racismo (84).",
+      "relevantes": [
+        {
+          "id": 13,
+          "titulo": "Natasha",
+          "url_libro": "https://ww3.lectulandia.com/book/natasha-david-bezmozgis/"
+        },
+        {
+          "id": 84,
+          "titulo": "Me llevaré el fuego",
+          "url_libro": "https://ww3.lectulandia.com/book/me-llevare-el-fuego/"
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "texto": "insomnio, ansiedad y el malestar de la vida cotidiana",
+      "tema": "malestar psicológico cotidiano",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "Angustia sin acontecimiento trágico externo: reclusión (2), agotamiento (50), duelo con insomnio (70), insomnio como tema (87), ataques de pánico (91), desolación diaria (94), estrés (97), vida que no encaja (106).",
+      "relevantes": [
+        {
+          "id": 2,
+          "titulo": "La última cerilla",
+          "url_libro": "https://ww3.lectulandia.com/book/la-ultima-cerilla/"
+        },
+        {
+          "id": 50,
+          "titulo": "El café frío, la cerveza caliente",
+          "url_libro": "https://ww3.lectulandia.com/book/el-cafe-frio-la-cerveza-caliente/"
+        },
+        {
+          "id": 70,
+          "titulo": "Criaturita",
+          "url_libro": "https://ww3.lectulandia.com/book/criaturita/"
+        },
+        {
+          "id": 87,
+          "titulo": "Las buenas noches",
+          "url_libro": "https://ww3.lectulandia.com/book/las-buenas-noches/"
+        },
+        {
+          "id": 91,
+          "titulo": "Perfectamente imperfecta",
+          "url_libro": "https://ww3.lectulandia.com/book/perfectamente-imperfecta/"
+        },
+        {
+          "id": 94,
+          "titulo": "Once maneras de sentirse solo",
+          "url_libro": "https://ww3.lectulandia.com/book/once-maneras-de-sentirse-solo/"
+        },
+        {
+          "id": 97,
+          "titulo": "El stress",
+          "url_libro": "https://ww3.lectulandia.com/book/el-stress/"
+        },
+        {
+          "id": 106,
+          "titulo": "No pienses en un elefante rosa",
+          "url_libro": "https://ww3.lectulandia.com/book/no-pienses-en-un-elefante-rosa/"
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "texto": "historia sentimental entre un agricultor sin esposa y una chica pobre que cuida ovejas",
+      "tema": "control: misma novela en dos traducciones, sin solapamiento léxico",
+      "sin_solapamiento_lexico": true,
+      "justificacion": "Las dos fichas son la misma novela de George Sand en traducciones distintas. La consulta describe el argumento con vocabulario que no aparece en ninguna de las dos sinopsis, de modo que TF-IDF no puede recuperarlas por construcción.",
+      "relevantes": [
+        {
+          "id": 44,
+          "titulo": "El Pantano del Diablo",
+          "url_libro": "https://ww3.lectulandia.com/book/el-pantano-del-diablo/"
+        },
+        {
+          "id": 57,
+          "titulo": "La charca del diablo",
+          "url_libro": "https://ww3.lectulandia.com/book/la-charca-del-diablo/"
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "texto": "escritores, librerías y el mundo literario",
+      "tema": "mundo literario",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "La escritura o el circuito del libro son el asunto, no el oficio incidental de un personaje.",
+      "relevantes": [
+        {
+          "id": 32,
+          "titulo": "Páginas de vuelta",
+          "url_libro": "https://ww3.lectulandia.com/book/paginas-de-vuelta/"
+        },
+        {
+          "id": 46,
+          "titulo": "El sol de los muertos",
+          "url_libro": "https://ww3.lectulandia.com/book/el-sol-de-los-muertos-vicente-blasco-ibanez/"
+        },
+        {
+          "id": 69,
+          "titulo": "El club de lectura",
+          "url_libro": "https://ww3.lectulandia.com/book/el-club-de-lectura/"
+        },
+        {
+          "id": 104,
+          "titulo": "Tardía fama",
+          "url_libro": "https://ww3.lectulandia.com/book/tardia-fama/"
+        },
+        {
+          "id": 109,
+          "titulo": "Las mil y una historias de A. J. Fikry",
+          "url_libro": "https://ww3.lectulandia.com/book/las-mil-y-una-historias-de-a-j-fikry/"
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "texto": "la adolescencia y el paso a la vida adulta",
+      "tema": "coming of age",
+      "sin_solapamiento_lexico": false,
+      "justificacion": "Relato de formación: el tránsito a la adultez estructura la narración.",
+      "relevantes": [
+        {
+          "id": 32,
+          "titulo": "Páginas de vuelta",
+          "url_libro": "https://ww3.lectulandia.com/book/paginas-de-vuelta/"
+        },
+        {
+          "id": 34,
+          "titulo": "Crónica de San Gabriel",
+          "url_libro": "https://ww3.lectulandia.com/book/cronica-de-san-gabriel/"
+        },
+        {
+          "id": 51,
+          "titulo": "Vida feliz de un joven llamado Esteban",
+          "url_libro": "https://ww3.lectulandia.com/book/vida-feliz-de-un-joven-llamado-esteban/"
+        },
+        {
+          "id": 68,
+          "titulo": "Todas las hijas de la casa de mi padre",
+          "url_libro": "https://ww3.lectulandia.com/book/todas-las-hijas-de-la-casa-de-mi-padre/"
+        },
+        {
+          "id": 89,
+          "titulo": "La fiesta",
+          "url_libro": "https://ww3.lectulandia.com/book/la-fiesta-tessa-hadley/"
+        }
+      ]
+    }
+  ]
+}
