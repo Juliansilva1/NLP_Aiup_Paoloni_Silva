@@ -1,0 +1,21 @@
+# Dependencias del notebook src/TP2-apellidos.ipynb (analisis de embeddings).
+# Separado de requirements.txt, que cubre solo el scraper.
+#
+# Instalacion (una vez):
+#     python -m venv .venv
+#     .venv\Scripts\activate        # Windows (bash: source .venv/Scripts/activate)
+#     pip install -r requirements-notebook.txt
+#
+# El modelo SBERT 'distiluse-base-multilingual-cased-v1' se descarga solo la
+# primera vez desde HuggingFace. El binario Word2Vec SBW
+# (data/SBW-vectors-300-min5.bin.gz) hay que tenerlo aparte.
+
+numpy
+pandas
+scikit-learn
+matplotlib
+gensim
+sentence-transformers
+jupyter
+nbconvert
+ipykernel
