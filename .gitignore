@@ -12,3 +12,8 @@ __pycache__/
 # Memoria agente
 CLAUDE.md
 AGENTS.md
+
+# Archivo de modelo entrenado
+*.bin
+*.bin.gz
+*.npz
