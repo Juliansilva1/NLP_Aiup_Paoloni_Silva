@@ -17,3 +17,8 @@ AGENTS.md
 *.bin
 *.bin.gz
 *.npz
+
+# Salidas derivadas del TP3: se regeneran corriendo src/TP_3/TP3_paso1.ipynb.
+# Los insumos de la catedra (catalogo_tp3.jsonl, muestra_etiquetada.csv) si van al repo.
+data/TP_3/catalogo_paso1.csv
+data/TP_3/paso1_pares.csv
