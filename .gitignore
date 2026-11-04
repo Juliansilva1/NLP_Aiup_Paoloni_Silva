@@ -18,7 +18,12 @@ AGENTS.md
 *.bin.gz
 *.npz
 
-# Salidas derivadas del TP3: se regeneran corriendo src/TP_3/TP3_paso1.ipynb.
-# Los insumos de la catedra (catalogo_tp3.jsonl, muestra_etiquetada.csv) si van al repo.
+# Salidas del TP3. Se ignora un archivo solo si cumple las dos cosas: que no se
+# entregue, y que rehacerlo sea barato. Todo lo demas va al repo, incluso si el
+# notebook lo genera: sospechosos.csv y catalogo_limpio.csv son entregables, y
+# rehacerlos cuesta una hora de codificacion en CPU.
+# Los insumos de la catedra (catalogo_tp3.jsonl, muestra_etiquetada.csv) tambien van.
+#
+# Intermedios del paso 1: no se entregan y el paso 1 corre en segundos.
 data/TP_3/catalogo_paso1.csv
 data/TP_3/paso1_pares.csv
