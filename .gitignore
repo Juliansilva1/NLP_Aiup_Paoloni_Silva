@@ -27,3 +27,8 @@ AGENTS.md
 # Intermedios del paso 1: no se entregan y el paso 1 corre en segundos.
 data/TP_3/catalogo_paso1.csv
 data/TP_3/paso1_pares.csv
+# La planilla de lectura del paso 3: no se entrega y se regenera desde
+# preferencias.csv en dos segundos. La fuente de verdad es el csv, que si va al repo.
+# Importante: despues de valorar en Excel hay que correr la vuelta al csv y commitear
+# ese csv; mientras las respuestas vivan solo en el xlsx, no hay copia en el repo.
+data/TP_3/preferencias.xlsx
