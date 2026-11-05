@@ -32,3 +32,8 @@ data/TP_3/paso1_pares.csv
 # Importante: despues de valorar en Excel hay que correr la vuelta al csv y commitear
 # ese csv; mientras las respuestas vivan solo en el xlsx, no hay copia en el repo.
 data/TP_3/preferencias.xlsx
+
+# Cache de embeddings del catalogo (paso 8): 16 MB binarios que no se entregan.
+# Rehacerlo cuesta ~9 min de CPU, asi que esta al limite del criterio de arriba;
+# pesa mas no meter binarios grandes en un repo grupal. Si molesta, se quita.
+data/TP_3/emb_catalogo.npy
