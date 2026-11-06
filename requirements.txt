@@ -1,31 +1,12 @@
-# Dependencias directas del proyecto. Las transitivas (soupsieve, numpy,
-# python-dateutil, tzdata, greenlet, pyee, typing_extensions) las resuelve pip.
-#
-# Despues de instalar hace falta, una sola vez por maquina:
-#     playwright install chromium
+# Dependencias directas del proyecto.
 
-# TP1 - scraping del catalogo
 beautifulsoup4==4.15.0
 lxml==6.1.3
 pandas==3.0.5
 playwright==1.62.0
-
-# TP3 - semejanza de cadenas del paso 1 (Levenshtein y Jaro-Winkler).
-# Es el motor que usa thefuzz por debajo; el notebook la instala si falta.
 rapidfuzz==3.14.6
-
-# TP3 - deteccion de idioma del paso 2.3. Hay que fijar DetectorFactory.seed
-# para que la deteccion sea reproducible.
 langdetect==1.0.9
-
-# TP3 - NER del paso 2.4. Despues de instalar hace falta bajar el modelo
-# (unos 550 MB), una vez por entorno:
-#     python -m spacy download es_core_news_lg
 spacy==3.8.18
-
-# TP3 - clasificador de oraciones del paso 2.5 y modelo B del paso 5. Es el mismo
-# modelo que el TP2 (distiluse-base-multilingual-cased-v1), que tiene que ser
-# multilingue porque las sinopsis estan en castellano. Arrastra torch, asi que es
-# la dependencia mas pesada del proyecto (unos 2 GB); el notebook la instala si
-# falta y el modelo se baja solo la primera vez desde HuggingFace.
+numpy==2.5.2
+scikit-learn==1.9.1
 sentence-transformers==6.2.0

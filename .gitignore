@@ -23,17 +23,5 @@ AGENTS.md
 # notebook lo genera: sospechosos.csv y catalogo_limpio.csv son entregables, y
 # rehacerlos cuesta una hora de codificacion en CPU.
 # Los insumos de la catedra (catalogo_tp3.jsonl, muestra_etiquetada.csv) tambien van.
-#
-# Intermedios del paso 1: no se entregan y el paso 1 corre en segundos.
-data/TP_3/catalogo_paso1.csv
-data/TP_3/paso1_pares.csv
-# La planilla de lectura del paso 3: no se entrega y se regenera desde
-# preferencias.csv en dos segundos. La fuente de verdad es el csv, que si va al repo.
-# Importante: despues de valorar en Excel hay que correr la vuelta al csv y commitear
-# ese csv; mientras las respuestas vivan solo en el xlsx, no hay copia en el repo.
-data/TP_3/preferencias.xlsx
 
-# Cache de embeddings del catalogo (paso 8): 16 MB binarios que no se entregan.
-# Rehacerlo cuesta ~9 min de CPU, asi que esta al limite del criterio de arriba;
-# pesa mas no meter binarios grandes en un repo grupal. Si molesta, se quita.
-data/TP_3/emb_catalogo.npy
+data/TP_3/Otros
